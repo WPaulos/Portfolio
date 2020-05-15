@@ -58,6 +58,7 @@ main {
       &__name {
         width: 222px;
         height: auto;
+        position: relative;
 
         h1 {
           font-family: "Raleway";
@@ -86,8 +87,43 @@ main {
             width: 6px;
             margin-bottom: 3%;
             margin-left: 2px;
-            margin-right: 2px;
+            margin-right: 1px;
           }
+        }
+
+        .trait-1 {
+          position: absolute;
+          background-color: black;
+          width: 1px;
+          height: 60vh;
+          top: -10vh;
+          left: 0;
+        }
+
+        .trait-2 {
+          position: absolute;
+          background-color: black;
+          width: 1px;
+          height: 60vh;
+          right: 0;
+          top: -20vh;
+        }
+
+        .trait-3 {
+          position: absolute;
+          background-color: black;
+          height: 1px;
+          width: 45vh;
+          top: 0;
+          left: -5vh;
+        }
+        .trait-4 {
+          position: absolute;
+          background-color: black;
+          height: 1px;
+          width: 45vh;
+          bottom: 0;
+          right: -5vh;
         }
       }
 

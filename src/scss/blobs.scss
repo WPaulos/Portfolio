@@ -6,7 +6,7 @@
   filter: url("#goo");
 }
 
-.loading_cont {
+.blob-1 {
   width: auto;
   height: auto;
   display: flex;
@@ -15,79 +15,79 @@
   position: absolute;
   right: -8vh;
   top: -10vh;
-}
 
-.blobs {
-  animation: rotate 10s infinite linear;
-  transform-origin: center;
-}
-
-.blobs.back {
-  animation: rotate-back 10s infinite linear;
-}
-
-svg {
-  width: 150px;
-  height: 150px;
-}
-
-.grow-shrink {
-  animation: grow-shrink 5s linear infinite;
-  transform-origin: center;
-}
-
-.fly-in {
-  animation: fly-in 0.5s linear;
-}
-
-.bigger {
-  animation: shrink 3s linear;
-  transform-origin: center;
-  transform: scale(0);
-}
-
-@keyframes rotate {
-  from {
-    transform: rotate(0);
+  .blobs {
+    animation: rotate 10s infinite linear;
+    transform-origin: center;
   }
 
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes rotate-back {
-  from {
-    transform: rotate(0);
+  .blobs.back {
+    animation: rotate-back 10s infinite linear;
   }
 
-  to {
-    transform: rotate(-360deg);
-  }
-}
-
-@keyframes fly-in {
-  0% {
-    transform: scale(0) translate(700px, 500px);
-    opacity: 0;
+  svg {
+    width: 150px;
+    height: 150px;
   }
 
-  80% {
-    transform: scale(0.5) translate(0, 0);
-    opacity: 1;
+  .grow-shrink {
+    animation: grow-shrink 5s linear infinite;
+    transform-origin: center;
   }
 
-  100% {
-    transform: scale(1);
-  }
-}
-
-@keyframes shrink {
-  from {
-    transform: scale(1);
+  .fly-in {
+    animation: fly-in 0.5s linear;
   }
 
-  to {
+  .bigger {
+    animation: shrink 3s linear;
+    transform-origin: center;
     transform: scale(0);
+  }
+
+  @keyframes rotate {
+    from {
+      transform: rotate(0);
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes rotate-back {
+    from {
+      transform: rotate(0);
+    }
+
+    to {
+      transform: rotate(-360deg);
+    }
+  }
+
+  @keyframes fly-in {
+    0% {
+      transform: scale(0) translate(700px, 500px);
+      opacity: 0;
+    }
+
+    80% {
+      transform: scale(0.5) translate(0, 0);
+      opacity: 1;
+    }
+
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  @keyframes shrink {
+    from {
+      transform: scale(1);
+    }
+
+    to {
+      transform: scale(0);
+    }
   }
 }

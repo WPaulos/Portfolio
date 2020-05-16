@@ -95,8 +95,8 @@ main {
           position: absolute;
           background-color: black;
           width: 1px;
-          height: 60vh;
-          top: -10vh;
+          height: 330%;
+          top: -12vh;
           left: 0;
         }
 
@@ -104,7 +104,7 @@ main {
           position: absolute;
           background-color: black;
           width: 1px;
-          height: 60vh;
+          height: 330%;
           right: 0;
           top: -20vh;
         }
@@ -113,7 +113,7 @@ main {
           position: absolute;
           background-color: black;
           height: 1px;
-          width: 42vh;
+          width: 120%;
           top: 0;
           left: -5vh;
         }
@@ -121,7 +121,7 @@ main {
           position: absolute;
           background-color: black;
           height: 1px;
-          width: 42vh;
+          width: 120%;
           bottom: 0;
           right: -5vh;
         }
@@ -132,6 +132,17 @@ main {
         font-size: 14px;
       }
     }
+
+    .grpPoint-home {
+      position: absolute;
+      bottom: -190%;
+      left: -4vh;
+
+      img {
+        width: 90px;
+        height: auto;
+      }
+    }
   }
   .scroll {
     position: absolute;
@@ -139,7 +150,7 @@ main {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    bottom: 20%;
+    bottom: 25%;
     font-family: "RedHatDisplay-Regular";
     font-size: 14px;
 

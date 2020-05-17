@@ -17,3 +17,29 @@
   font-family: "Raleway";
   src: url("../assets/fonts/Raleway-SemiBold.woff") format("woff");
 }
+
+/*---- taille ----*/
+
+@mixin small {
+  @media (min-width: 425px) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin Xlarge {
+  @media (min-width: 1366px) {
+    @content;
+  }
+}

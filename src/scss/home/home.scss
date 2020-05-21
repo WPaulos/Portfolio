@@ -1,45 +1,9 @@
 @import "media.scss";
 
-header {
-  z-index: 1;
-  width: 100%;
-
-  .menu {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 20px 20px 10px;
-    position: relative;
-
-    .logo {
-      height: 25px;
-      width: auto;
-      img {
-        height: 100%;
-      }
-    }
-
-    .navigation {
-      display: flex;
-      width: 160px;
-      justify-content: space-between;
-
-      li {
-        font-size: 16px;
-        font-family: "RedHatDisplay-Bold";
-        display: flex;
-
-        img {
-          margin-right: 10px;
-        }
-      }
-    }
-  }
-}
 main {
   position: absolute;
   top: 0;
+  z-index: -4;
 
   .home {
     display: flex;
@@ -64,7 +28,7 @@ main {
         position: relative;
 
         @include small {
-          width: 320px;
+          width: 270px;
         }
 
         @include medium {
@@ -84,7 +48,7 @@ main {
           font-size: 45px;
 
           @include small {
-            font-size: 65px;
+            font-size: 55px;
           }
 
           @include medium {
@@ -160,13 +124,17 @@ main {
             margin-bottom: 3%;
             margin-left: 2px;
             margin-right: 1px;
+
+            @include small {
+              width: 7px;
+            }
           }
         }
 
         .trait-1 {
           position: absolute;
           background-color: black;
-          width: 1px;
+          width: 1.5px;
           height: 62vh;
           top: -12vh;
           left: 0;
@@ -187,8 +155,12 @@ main {
           height: 1px;
           width: 82vw;
           top: 0;
-
           left: -8vw;
+
+          @include small {
+            width: 140%;
+            left: -10vw;
+          }
         }
         .trait-4 {
           position: absolute;
@@ -197,12 +169,21 @@ main {
           width: 82vw;
           bottom: 0;
           right: -8vw;
+
+          @include small {
+            width: 140%;
+            right: -10vw;
+          }
         }
       }
 
       &__ui-front {
         font-family: "RedHatDisplay-Regular";
         font-size: 14px;
+
+        @include medium {
+          font-size: 16px;
+        }
       }
     }
   }

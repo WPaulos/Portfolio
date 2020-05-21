@@ -21,7 +21,7 @@
 /*---- taille ----*/
 
 @mixin small {
-  @media (min-width: 425px) {
+  @media (min-width: 414px) {
     @content;
   }
 }

@@ -94,7 +94,7 @@
     align-items: center;
     flex-direction: column;
     width: 100vw;
-    margin-top: 25px;
+    margin-top: 35px;
 
     .skillsLittle {
       font-family: "RedHatDisplay-Bold";
@@ -112,20 +112,20 @@
       margin-top: 20px;
 
       .ligne-1 {
-        width: 90%;
+        width: 250px;
         display: flex;
         justify-content: space-around;
       }
 
       .ligne-2 {
-        width: 70%;
+        width: 200px;
         display: flex;
         justify-content: space-around;
         margin-top: 8px;
         margin-bottom: 8px;
       }
       .ligne-3 {
-        width: 90%;
+        width: 250px;
         display: flex;
         justify-content: space-around;
       }

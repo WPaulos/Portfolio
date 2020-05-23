@@ -52,10 +52,10 @@ header {
         @include small {
           display: block;
           font-family: "RedHatDisplay-Bold";
-          font-size: 16px;
+          font-size: 14px;
 
           @include medium {
-            font-size: 18px;
+            font-size: 16px;
           }
         }
       }
@@ -63,7 +63,7 @@ header {
 
     .navigation {
       display: flex;
-      width: 160px;
+      width: 170px;
       justify-content: space-between;
 
       @include medium {
@@ -71,12 +71,12 @@ header {
       }
 
       li {
-        font-size: 16px;
+        font-size: 14px;
         font-family: "RedHatDisplay-Bold";
         display: flex;
 
         @include medium {
-          font-size: 18px;
+          font-size: 16px;
         }
 
         a {

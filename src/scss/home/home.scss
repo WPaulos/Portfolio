@@ -129,6 +129,10 @@ main {
             @include small {
               width: 7px;
             }
+
+            @include medium {
+              width: 9px;
+            }
           }
         }
 
@@ -154,12 +158,12 @@ main {
           position: absolute;
           background-color: black;
           height: 1px;
-          width: 82vw;
+          width: 115%;
           top: 0;
-          left: -8vw;
+          left: -4vw;
 
           @include small {
-            width: 140%;
+            width: 135%;
             left: -10vw;
           }
         }
@@ -167,12 +171,12 @@ main {
           position: absolute;
           background-color: black;
           height: 1px;
-          width: 82vw;
+          width: 115%;
           bottom: 0;
-          right: -8vw;
+          right: -4vw;
 
           @include small {
-            width: 140%;
+            width: 135%;
             right: -10vw;
           }
         }

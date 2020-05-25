@@ -20,6 +20,15 @@
       position: absolute;
       top: 30px;
       right: 2px;
+
+      @include small {
+        top: 50px;
+        right: 2px;
+        height: 120px;
+      }
+      @include medium {
+        display: none;
+      }
     }
   }
 
@@ -31,8 +40,17 @@
     img {
       height: 90px;
       position: absolute;
-      bottom: 100px;
+      bottom: 80px;
       left: 2px;
+
+      @include small {
+        bottom: 20px;
+        left: 2px;
+        height: 120px;
+      }
+      @include medium {
+        display: none;
+      }
     }
   }
 
@@ -51,11 +69,15 @@
       z-index: -3;
 
       img {
-        width: 90px;
+        width: 100px;
         height: auto;
 
         @include small {
-          width: 130px;
+          width: 135px;
+        }
+
+        @include medium {
+          width: 165px;
         }
       }
     }
@@ -75,87 +97,116 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 35px;
+    margin-top: 55px;
     flex-direction: column;
+
+    @include medium {
+      flex-direction: row;
+      width: 90%;
+      justify-content: start;
+      align-items: flex-start;
+    }
 
     .perso-me {
       display: flex;
       width: auto;
       height: auto;
+      @include medium {
+        order: 2;
+      }
+
       svg {
         width: 85px;
         height: auto;
       }
     }
-    .texte {
-      width: 80%;
-      text-align: center;
-      margin-top: 20px;
 
-      p {
-        font-size: 14px;
-        font-family: "RedHatDisplay-Regular";
-        line-height: 148%;
-      }
-    }
-  }
-
-  .button {
-    margin-top: 20px;
-    a {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: auto;
-      text-decoration: none;
-      font-family: "RedHatDisplay-Medium";
-      font-size: 14px;
-      color: #262424;
-      img {
-        margin-right: 5px;
-      }
-    }
-  }
-  .skills {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100vw;
-    margin-top: 35px;
-
-    .skillsLittle {
-      font-family: "RedHatDisplay-Bold";
-      font-size: 18px;
-    }
-
-    .comp {
+    .article {
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      width: 80%;
-      font-family: "RedHatDisplay-Regular";
-      font-size: 14px;
+
+      @include medium {
+        order: 1;
+        width: 100%;
+      }
+
+      .texte {
+        width: 80%;
+        text-align: center;
+        margin-top: 20px;
+
+        @include medium {
+          text-align: left;
+          width: 50%;
+        }
+
+        p {
+          font-size: 14px;
+          font-family: "RedHatDisplay-Regular";
+          line-height: 148%;
+        }
+      }
+    }
+
+    .button {
       margin-top: 20px;
-
-      .ligne-1 {
-        width: 250px;
+      a {
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+        text-decoration: none;
+        font-family: "RedHatDisplay-Medium";
+        font-size: 14px;
+        color: #262424;
+        img {
+          margin-right: 5px;
+        }
+      }
+    }
+    .skills {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      width: 100vw;
+      margin-top: 45px;
+
+      .skillsLittle {
+        font-family: "RedHatDisplay-Bold";
+        font-size: 18px;
       }
 
-      .ligne-2 {
-        width: 230px;
+      .comp {
         display: flex;
-        justify-content: space-around;
-        margin-top: 8px;
-        margin-bottom: 8px;
-      }
-      .ligne-3 {
-        width: 250px;
-        display: flex;
-        justify-content: space-around;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 80%;
+        font-family: "RedHatDisplay-Regular";
+        font-size: 14px;
+        margin-top: 20px;
+
+        .ligne-1 {
+          width: 250px;
+          display: flex;
+          justify-content: space-around;
+        }
+
+        .ligne-2 {
+          width: 230px;
+          display: flex;
+          justify-content: space-around;
+          margin-top: 8px;
+          margin-bottom: 8px;
+        }
+        .ligne-3 {
+          width: 250px;
+          display: flex;
+          justify-content: space-around;
+        }
       }
     }
   }

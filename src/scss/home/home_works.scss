@@ -27,7 +27,18 @@
         height: 120px;
       }
       @include medium {
-        display: none;
+        height: 150px;
+        top: 40px;
+        right: 2px;
+      }
+
+      @include large {
+        height: 170px;
+        top: 20px;
+      }
+
+      @include Xlarge {
+        height: 180px;
       }
     }
   }
@@ -49,7 +60,17 @@
         height: 120px;
       }
       @include medium {
-        display: none;
+        height: 150px;
+        left: 2px;
+        bottom: 30px;
+      }
+
+      @include large {
+        height: 170px;
+      }
+
+      @include Xlarge {
+        height: 180px;
       }
     }
   }
@@ -61,6 +82,25 @@
     flex-direction: column;
     width: 65%;
     position: relative;
+
+    .big-point {
+      display: none;
+
+      @include large {
+        display: block;
+        position: absolute;
+        bottom: 10px;
+        left: -20px;
+        z-index: -3;
+
+        img {
+          @include large {
+            width: auto;
+            height: 180px;
+          }
+        }
+      }
+    }
 
     .grpPoint-home {
       position: absolute;
@@ -79,6 +119,10 @@
         @include medium {
           width: 165px;
         }
+
+        @include large {
+          display: none;
+        }
       }
     }
     .me {
@@ -88,6 +132,14 @@
 
         @include small {
           font-size: 35px;
+        }
+
+        @include medium {
+          font-size: 45px;
+        }
+
+        @include large {
+          font-size: 55px;
         }
       }
     }
@@ -102,9 +154,6 @@
 
     @include medium {
       flex-direction: row;
-      width: 90%;
-      justify-content: start;
-      align-items: flex-start;
     }
 
     .perso-me {
@@ -118,6 +167,14 @@
       svg {
         width: 85px;
         height: auto;
+
+        @include medium {
+          width: 125px;
+        }
+
+        @include large {
+          width: 155px;
+        }
       }
     }
 
@@ -129,7 +186,16 @@
 
       @include medium {
         order: 1;
-        width: 100%;
+        width: 60%;
+        align-items: flex-start;
+      }
+
+      @include large {
+        width: 50%;
+      }
+
+      @include Xlarge {
+        width: 55%;
       }
 
       .texte {
@@ -139,13 +205,20 @@
 
         @include medium {
           text-align: left;
-          width: 50%;
+        }
+
+        @include large {
+          width: 80%;
         }
 
         p {
           font-size: 14px;
           font-family: "RedHatDisplay-Regular";
           line-height: 148%;
+
+          @include medium {
+            font-size: 16px;
+          }
         }
       }
     }
@@ -161,8 +234,14 @@
         font-family: "RedHatDisplay-Medium";
         font-size: 14px;
         color: #262424;
+        @include medium {
+          font-size: 16px;
+        }
         img {
           margin-right: 5px;
+          @include medium {
+            width: 48px;
+          }
         }
       }
     }
@@ -174,9 +253,19 @@
       width: 100vw;
       margin-top: 45px;
 
+      @include medium {
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: auto;
+      }
+
       .skillsLittle {
         font-family: "RedHatDisplay-Bold";
         font-size: 18px;
+
+        @include medium {
+          font-size: 22px;
+        }
       }
 
       .comp {
@@ -189,23 +278,64 @@
         font-size: 14px;
         margin-top: 20px;
 
-        .ligne-1 {
-          width: 250px;
-          display: flex;
-          justify-content: space-around;
+        img {
+          margin-left: 12px;
+          margin-right: 12px;
         }
 
-        .ligne-2 {
-          width: 230px;
-          display: flex;
-          justify-content: space-around;
-          margin-top: 8px;
-          margin-bottom: 8px;
+        @include medium {
+          font-size: 16px;
+          align-items: flex-start;
+          width: auto;
         }
+
+        .lign-row {
+          @include medium {
+            display: flex;
+            flex-direction: row;
+          }
+          .ligne-1 {
+            width: 250px;
+            display: flex;
+            justify-content: space-around;
+
+            @include medium {
+              width: auto;
+            }
+          }
+
+          .ptit-point {
+            display: none;
+
+            @include medium {
+              display: block;
+            }
+          }
+
+          .ligne-2 {
+            width: 230px;
+            display: flex;
+            justify-content: space-around;
+            margin-top: 8px;
+            margin-bottom: 8px;
+
+            @include medium {
+              margin-top: 0;
+              margin-bottom: 0;
+              width: auto;
+            }
+          }
+        }
+
         .ligne-3 {
           width: 250px;
           display: flex;
           justify-content: space-around;
+
+          @include medium {
+            width: auto;
+            margin-top: 10px;
+          }
         }
       }
     }

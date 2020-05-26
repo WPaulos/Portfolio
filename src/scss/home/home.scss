@@ -133,6 +133,10 @@ main {
             @include medium {
               width: 9px;
             }
+
+            @include large {
+              width: 12px;
+            }
           }
         }
 
@@ -166,6 +170,15 @@ main {
             width: 135%;
             left: -10vw;
           }
+
+          @include medium {
+            width: 165%;
+            left: -20vw;
+          }
+
+          @include Xlarge {
+            width: 185%;
+          }
         }
         .trait-4 {
           position: absolute;
@@ -178,6 +191,15 @@ main {
           @include small {
             width: 135%;
             right: -10vw;
+          }
+
+          @include medium {
+            width: 165%;
+            right: -20vw;
+          }
+
+          @include Xlarge {
+            width: 185%;
           }
         }
       }
